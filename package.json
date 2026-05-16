@@ -1,0 +1,23 @@
+{
+  "name": "playwright-automation-framework",
+  "version": "1.0.0",
+  "description": "demo playwright automation framework",
+  "homepage": "https://github.com/drogers14/playwright-automation-framework#readme",
+  "bugs": {
+    "url": "https://github.com/drogers14/playwright-automation-framework/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drogers14/playwright-automation-framework.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
