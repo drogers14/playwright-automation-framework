@@ -27,6 +27,10 @@ Examples include:
 - Product Details Page
 - Cart Page
 - Checkout Flow
+
+**note:**
+If a UI element's selector changes, you only update it in one place (the page object) instead of across multiple test files.
+
 ### tests/
 Contains test suites organized by feature coverage and user flows.
 ### config/
