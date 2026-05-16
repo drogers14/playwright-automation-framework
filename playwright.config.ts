@@ -7,8 +7,10 @@ export default defineConfig({
   // Run all tests in parallel.
   fullyParallel: true,
 
-
-
   // Reporter to use
   reporter: 'html',
+  use: {
+    baseURL: 'https://sauce-demo.myshopify.com/',
+    // storageState: 'state.json',
+  },
 })
