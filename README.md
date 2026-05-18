@@ -19,7 +19,8 @@ Modern Playwright + TypeScript automation framework designed for scalable E2E an
 ## Framework Architecture
 ### pages/
 Contains reusable Page Object Models responsible for encapsulating selectors, page actions, and validation logic across application workflows.
-
+Organized by area of interst (Account: login, signup, Checkout: cart, shipping, payment) 
+<!-- Pages are organized by functional domain (e.g. Account, Checkout, Orders) to improve maintainability, readability, and test scalability. -->
 Examples include:
 
 - Login Page
@@ -31,6 +32,8 @@ Examples include:
 **note:**
 If a UI element's selector changes, you only update it in one place (the page object) instead of across multiple test files.
 
+### fixtures/
+Reusable test setup and shared context for pages, environments, authenticated states, browsers, and test configuration. Provides context for pages and tests (browser, url, device) 
 ### tests/
 Contains test suites organized by feature coverage and user flows.
 ### config/

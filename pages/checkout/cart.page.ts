@@ -1,3 +1,4 @@
+/* ... */
 import { expect, Page, Locator } from '@playwright/test';
 
 export class CartPage {
@@ -8,4 +9,5 @@ export class CartPage {
         this.page = page;
         this.cartHeader = page.locator('h1', {hasText: 'My Cart'});
     }
+  
 }
