@@ -9,5 +9,13 @@ export class CartPage {
         this.page = page;
         this.cartHeader = page.locator('h1', {hasText: 'My Cart'});
     }
+
+    async goto(){
+        await this.page.goto('./cart');
+    }
+
+    async verifyCartHeader(){
+        await expect(this.cartHeader).toBeVisible();
+    }
   
 }

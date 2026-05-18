@@ -1,8 +1,9 @@
 import { test, expect } from '@playwright/test';
 import { CartPage } from '../../pages/checkout/cart.page.ts';
 
-// const cartPage = new CartPage(page);
 test('add item to cart', async ({ page }, testInfo) =>{
+    const cartPage = new CartPage(page);
+
     await page.goto('https://sauce-demo.myshopify.com/')
     
     // Expect a title "to contain" a substring.
@@ -27,5 +28,9 @@ test('add item to cart', async ({ page }, testInfo) =>{
     const screenshot2 = await page.screenshot();
     await testInfo.attach('screenshot2', { body: screenshot2, contentType: 'image/png' });
 
+    await cartPage.goto();
+    await cartPage.verifyCartHeader();
 
+    const screenshot3 = await page.screenshot();
+    await testInfo.attach('screenshot3', { body: screenshot3, contentType: 'image/png' });
 });

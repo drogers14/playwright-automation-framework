@@ -61,6 +61,8 @@ The framework is designed for CI/CD integration using:
 
 Automated test execution includes regression validation, reporting, screenshots, traces, and failure artifacts.
 
+## Flaky Test Mitigation Strategies
+
 ## Future Improvements
 - AI-assisted test generation
 - visual regression
