@@ -15,6 +15,17 @@ test('add item to cart', async ({ page }, testInfo) =>{
     const screenshot = await page.screenshot();
     await testInfo.attach('screenshot', { body: screenshot, contentType: 'image/png' });
 
+    // click on 'add to cart'
+    const addToCartButton =  page.locator('#add');
+    await addToCartButton.click();
+    // Expect cart total to be 1 
+    const cartTotal = await page.locator('//*[@id="cart-target-desktop"]');
+    await cartTotal.waitFor({ state: 'visible' });
+    const cartTotalValue = await cartTotal.innerText();
+    console.log('Item count total: ' + cartTotalValue);
+    
+    const screenshot2 = await page.screenshot();
+    await testInfo.attach('screenshot2', { body: screenshot2, contentType: 'image/png' });
 
 
 });
