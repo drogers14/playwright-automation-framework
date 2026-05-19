@@ -1,8 +1,10 @@
 import { test, expect } from '@playwright/test';
-import { CartPage } from '../../pages/checkout/cart.page.ts';
+import { CartPage,  } from '../../pages/checkout/cart.page.ts';
+import { ProductDescPage } from '../../pages/discovery/productDesc.page.ts';
 
 test('add item to cart', async ({ page }, testInfo) =>{
     const cartPage = new CartPage(page);
+    const productDescPage = new ProductDescPage(page);
 
     await page.goto('https://sauce-demo.myshopify.com/')
     
@@ -17,13 +19,9 @@ test('add item to cart', async ({ page }, testInfo) =>{
     await testInfo.attach('screenshot', { body: screenshot, contentType: 'image/png' });
 
     // click on 'add to cart'
-    const addToCartButton =  page.locator('#add');
-    await addToCartButton.click();
+    await productDescPage.addToCart();
     // Expect cart total to be 1 
-    const cartTotal = await page.locator('//*[@id="cart-target-desktop"]');
-    await cartTotal.waitFor({ state: 'visible' });
-    const cartTotalValue = await cartTotal.innerText();
-    console.log('Item count total: ' + cartTotalValue);
+    
     
     const screenshot2 = await page.screenshot();
     await testInfo.attach('screenshot2', { body: screenshot2, contentType: 'image/png' });

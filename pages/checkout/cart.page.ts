@@ -16,6 +16,7 @@ export class CartPage {
 
     async verifyCartHeader(){
         await expect(this.cartHeader).toBeVisible();
+        
     }
   
 }

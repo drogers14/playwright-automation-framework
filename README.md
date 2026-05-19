@@ -15,7 +15,8 @@ Modern Playwright + TypeScript automation framework designed for scalable E2E an
 - GitHub Actions CI integration
 - Trace viewer support
 - Screenshot/video capture on failure
-🚧🔧 Coming soon 🔧🚧
+
+### 🚧🔧 Coming soon 🔧🚧
 - Appium integration
 - 
 
