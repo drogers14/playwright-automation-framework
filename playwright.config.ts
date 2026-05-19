@@ -11,6 +11,7 @@ export default defineConfig({
   reporter: 'html',
   use: {
     baseURL: 'https://sauce-demo.myshopify.com/',
+    video: 'retain-on-failure',
     // storageState: 'state.json',
   },
 })
