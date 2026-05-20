@@ -23,8 +23,12 @@ export class ProductDescPage {
     async addToCart() {
         await this.addToCartButton.click();
         const itemTotal = await this.page.locator('//*[@id="cart-target-desktop"]');
-        await itemTotal.waitFor({ state: 'visible' });
+        await expect(itemTotal).toContainText('1');
+        // await itemTotal.waitFor({ state: 'visible',timeout: 6000 });
+        // await browser_wait_for { time: 3 };
         const itemTotalValue = await itemTotal.innerText();
         console.log('Item count total: ' + itemTotalValue);
+        // const result = itemTotalValue.replace(/[()]/g, '');
+        // await expect(result).toBeGreaterThanOrEqual(1);
     }
 }

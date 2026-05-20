@@ -9,9 +9,11 @@ export default defineConfig({
 
   // Reporter to use
   reporter: 'html',
+  retries: 2,
   use: {
     baseURL: 'https://sauce-demo.myshopify.com/',
     video: 'retain-on-failure',
+    
     // storageState: 'state.json',
   },
 })

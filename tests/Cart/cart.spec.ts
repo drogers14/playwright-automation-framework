@@ -31,4 +31,11 @@ test('add item to cart', async ({ page }, testInfo) =>{
 
     const screenshot3 = await page.screenshot();
     await testInfo.attach('screenshot3', { body: screenshot3, contentType: 'image/png' });
+
+    /* verify there is an item in the cart */
+    await cartPage.verifyCartQty("1");
+    const screenshot4 = await page.screenshot();
+    await testInfo.attach('screenshot4', { body: screenshot4, contentType: 'image/png' });
+
+
 });
