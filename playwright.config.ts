@@ -8,7 +8,12 @@ export default defineConfig({
   fullyParallel: true,
 
   // Reporter to use
-  reporter: 'html',
+  reporter: [["line"], ["allure-playwright",
+      {
+        resultsDir: "allure-results",
+        detail: true,
+        suiteTitle: true,
+}],['html'],],
   retries: 2,
   use: {
     baseURL: 'https://sauce-demo.myshopify.com/',
