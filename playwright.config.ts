@@ -18,7 +18,7 @@ export default defineConfig({
   use: {
     baseURL: 'https://sauce-demo.myshopify.com/',
     video: 'retain-on-failure',
-    
+    trace: 'retain-on-failure',
     // storageState: 'state.json',
   },
 })

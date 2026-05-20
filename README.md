@@ -56,6 +56,16 @@ npx playwright test
 
 npx playwright test --headed
 
+## Debugging with Trace Viewer
+
+The framework integrates Playwright Trace Viewer for:
+- action replay
+- network inspection
+- DOM snapshots
+- console debugging
+- flaky test analysis
+![Trace Viewer on Failure](image.png)
+
 ## CI/CD
 The framework is designed for CI/CD integration using:
 
