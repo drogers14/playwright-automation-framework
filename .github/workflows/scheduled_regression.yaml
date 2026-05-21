@@ -27,4 +27,5 @@ jobs:
 
       - name: Run all Cart scenarios
         run: npx playwright test tests/cart/* 
-        echo: "Regression completed at $(date)"
+        
+      - echo: "Regression completed at $(date)"
