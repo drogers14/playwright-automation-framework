@@ -74,8 +74,12 @@ The framework is designed for CI/CD integration using:
 - Argo CD deployment validation workflows
 
 Automated test execution includes regression validation, reporting, screenshots, traces, and failure artifacts.
+### Job is ran once a day to ensure stability
 
 ## Flaky Test Mitigation Strategies
+- Retries on failure
+- Video Capture for debugging
+- Trace View
 
 ## Future Improvements
 - AI-assisted test generation

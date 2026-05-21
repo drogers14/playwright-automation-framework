@@ -1,0 +1,19 @@
+name: Daily Regression
+
+on:
+  schedule:
+    # Run at 6 AM UTC every day
+    - cron: '0 6 * * *'
+  # Allow manual trigger for testing
+  workflow_dispatch:
+
+jobs:
+  daily-regression-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run all Cart scenarios
+        run: |
+          npx playwright test tests/cart/*   "Regreession completed at $(date)"
