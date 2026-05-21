@@ -1,8 +1,9 @@
 <!-- # playwright-automation-framework
 a Demo Playwright Automation Framework to support SauceDemo testing -->
 
-# Playwright Automation Framework [![Playwright Tests](https://github.com/drogers14/playwright-automation-framework/actions/workflows/playwright.yaml/badge.svg)](https://github.com/drogers14/playwright-automation-framework/actions/workflows/playwright.yaml)
-
+# Playwright Automation Framework 
+[![Playwright Tests](https://github.com/drogers14/playwright-automation-framework/actions/workflows/playwright.yaml/badge.svg)](https://github.com/drogers14/playwright-automation-framework/actions/workflows/playwright.yaml)
+[![Daily Regression](https://github.com/drogers14/playwright-automation-framework/actions/workflows/scheduled_regression.yaml/badge.svg)](https://github.com/drogers14/playwright-automation-framework/actions/workflows/scheduled_regression.yaml)
 ## Overview
 Modern Playwright + TypeScript automation framework designed for scalable E2E and API testing ( SauceDemo ).
 
