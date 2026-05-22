@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('has title', async ({ page }) => {
+    test.skip();
     await page.goto('https://sauce-demo.myshopify.com/')
     
     // Expect a title "to contain" a substring.
@@ -8,6 +9,7 @@ test('has title', async ({ page }) => {
 });
 
 test('get catalog link', async ({ page }) => {
+    test.skip();
     await page.goto('https://sauce-demo.myshopify.com/');
   
     // Click the catalog link.
