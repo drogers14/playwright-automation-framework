@@ -22,7 +22,6 @@ export class CartPage {
 
     async verifyCartQty(total){
         await expect(this.qty).toBeVisible();
-        // const totalQty = await this.qty.innerText()
         console.log('Cart Total Qty: ' + await this.qty.inputValue());
         await expect(this.qty).toHaveValue(total);
 
