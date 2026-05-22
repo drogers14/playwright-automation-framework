@@ -6,7 +6,7 @@ test('add item to cart', async ({ page }, testInfo) =>{
     const cartPage = new CartPage(page);
     const productDescPage = new ProductDescPage(page);
 
-    await page.goto('https://sauce-demo.myshopify.com/')
+    await page.goto('https://sauce-demo.myshopify.com/');
     
     // Expect a title "to contain" a substring.
     await expect(page).toHaveTitle(/Sauce Demo/);

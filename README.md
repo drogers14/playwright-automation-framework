@@ -20,6 +20,7 @@ Modern Playwright + TypeScript automation framework designed for scalable E2E an
 ### 🚧🔧 Coming soon 🔧🚧
 - Appium integration
 - Auto Bug Reporting (400 errors, multi-failure)
+- Performance Testing
 
 ## Framework Architecture
 ### pages/
