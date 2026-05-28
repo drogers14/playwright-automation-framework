@@ -40,9 +40,10 @@ jobs:
            "testsFailed": 0,
             "browsers": 3,
             "lastRun": "'"$(date -u +"%Y-%m-%dT%H:%M:%SZ")"'",
-            "status:" "PASSING"
+            "status": "PASSING"
           }'  > test-results/regression-summary.json
-      
+      - name: Print generated JSON
+        run: cat test-results/regression-summary.json
       - uses: planetscale/ghcommit-action@v0.2.18 
         with: 
           commit_message: "chore: auto commit" 
