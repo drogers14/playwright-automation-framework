@@ -29,8 +29,10 @@ test('user can sign up for new account', async ({ page }, testInfo) => {
     const closeButton = page.getByTestId(
         'authorize-modal-close-button'
     );
+    if(await closeButton.isVisible()){
+        await closeButton.click();
 
-    await closeButton.click();
+    }
 
     console.log('Closed pop up');
     const screenshot1 = await page.screenshot();
