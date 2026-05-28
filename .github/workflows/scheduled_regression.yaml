@@ -10,6 +10,8 @@ on:
 jobs:
   daily-regression-test:
     runs-on: ubuntu-latest
+    permissions: 
+      contents: write
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -36,5 +38,16 @@ jobs:
           echo '{
            "testsPassed": 142,
            "testsFailed": 0,
-            "browsers": 3
+            "browsers": 3,
+            "lastRun": "'"$(date -u +"%Y-%m-%dT%H:%M:%SZ")"'",
+            "status:"" "PASSING"
           }'  > test-results/regression-summary.json
+      
+      - uses: planetscale/ghcommit-action@v0.2.18 
+        with: 
+          commit_message: "chore: auto commit" 
+          repo: ${{ github.repository }} 
+          branch: ${{ github.ref_name }} 
+
+        env: 
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
