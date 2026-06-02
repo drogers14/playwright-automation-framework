@@ -22,6 +22,11 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "allure-playwright": "^3.9.0"
+    "allure-playwright": "^3.9.0",
+    "lighthouse": "^13.3.0",
+    "playwright": "^1.60.0"
+  },
+  "dependencies": {
+    "playwright-lighthouse": "^4.0.0"
   }
 }
