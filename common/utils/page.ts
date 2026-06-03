@@ -1,7 +1,7 @@
 // ./common/utils/helpers.ts
 
 import { playAudit } from "playwright-lighthouse";
-import { thresholds } from "@common/helpers/page";
+import { thresholds } from "../helpers/page.ts";
 
 export async function runPerformanceAuditInDesktop(
   page,
